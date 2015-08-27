@@ -593,6 +593,7 @@ public class Compiler implements MessageConsumer {
     p.put("extra.time.zone", Long.toString(timezone));
     p.put("extra.time.dst", Long.toString(daylight));
 
+    if (!(BaseNoGui.isTeensyduino()))
     new LoadVIDPIDSpecificPreferences().load(p);
 
     return p;
